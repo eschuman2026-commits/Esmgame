@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3rxmu6865jsf"]
+
+[ext_resource type="PackedScene" uid="uid://fhtm0l20kgsa" path="res://yfttfgyfgtytfgygtytgygty.tscn" id="1_wago0"]
+[ext_resource type="PackedScene" uid="uid://b6prxvvwr812o" path="res://character_body_3d.tscn" id="2_m45xy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m45xy"]
+size = Vector3(3, 1, 5.048828)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j1fgw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wsmgn"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Node3D" parent="Node3D" instance=ExtResource("1_wago0")]
+transform = Transform3D(-0.00079131126, 0.7526214, 0.6584531, 0.9903745, 0.09172757, -0.10365566, -0.13841173, 0.6520331, -0.74544966, -0.6162434, -0.09451047, -1.1677978)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D"]
+transform = Transform3D(0.99999994, 0, -7.450581e-09, 7.450581e-09, 0.9999999, 0, 0, -2.9802322e-08, 0.9999999, -0.13841173, 0.65203303, -0.7454494)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D/MeshInstance3D"]
+transform = Transform3D(0.99999994, 0, -7.450581e-09, 7.450581e-09, 0.9999999, 0, 0, -2.9802322e-08, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.0244141)
+shape = SubResource("BoxShape3D_m45xy")
+debug_color = Color(0.26405272, 0.5872681, 0.6601346, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.6557428, 0, 0.7549843, 0, 1, 0, -0.7549843, 0, 0.6557428, 0.46538496, 0.2447772, 0.15231538)
+mesh = SubResource("BoxMesh_j1fgw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CollisionShape3D/MeshInstance3D"]
+transform = Transform3D(0.879347, -0.34663928, 0.32648098, -0.4596017, -0.79718286, 0.39149144, 0.12455875, -0.49430814, -0.8603165, -2.6360228, -2.3161283, 3.9871526)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.99998856, 0, 0.004782184, 0, 1, 0, -0.004782184, 0, 0.99998856, -0.055087566, -0.019242048, -0.06322479)
+mesh = SubResource("BoxMesh_wsmgn")
+
+[node name="CharacterBody3D" parent="CollisionShape3D" instance=ExtResource("2_m45xy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1167073, 0.68729734, -0.2964518)
+speed = 500
+fall_exeleration = 75
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.05274658, -0.44943824, -0.89175284, 0.6707012, 0.6456596, -0.36508018, 0.73984975, -0.6173564, 0.26738235, 15.616294, -11.985283, 1.9100118)
+fov = 71.781235

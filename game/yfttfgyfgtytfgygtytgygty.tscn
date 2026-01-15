@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://fhtm0l20kgsa"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-0.00079131126, 0.7526214, 0.6584531, 0.9903745, 0.09172757, -0.10365566, -0.13841173, 0.6520331, -0.74544966, -0.6162434, -0.09451047, -0.1677978)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Node"]
+
+[node name="Node" type="Node" parent="Node/Node"]
+
+[node name="Node" type="Node" parent="Node/Node/Node"]

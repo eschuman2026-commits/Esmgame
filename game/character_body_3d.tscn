@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6prxvvwr812o"]
+
+[ext_resource type="Script" uid="uid://de8opv63e16w0" path="res://character_body_3d.gd" id="1_iwpo4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bu0v1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_iwpo4"]
+
+[sub_resource type="Skin" id="Skin_fb3t6"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+floor_stop_on_slope = false
+script = ExtResource("1_iwpo4")
+speed = null
+fall_exeleration = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_bu0v1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = SubResource("CylinderMesh_iwpo4")
+skin = SubResource("Skin_fb3t6")
