@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://dbq4cajf8vn6v"]
+
+[ext_resource type="Texture2D" uid="uid://bh1jlorq6v5xq" path="res://IMG_4266.png" id="1_qsska"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubw0w"]
+atlas = ExtResource("1_qsska")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w0ae"]
+atlas = ExtResource("1_qsska")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tagnl"]
+atlas = ExtResource("1_qsska")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js85u"]
+atlas = ExtResource("1_qsska")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw44f"]
+atlas = ExtResource("1_qsska")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk338"]
+atlas = ExtResource("1_qsska")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs8oq"]
+atlas = ExtResource("1_qsska")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px176"]
+atlas = ExtResource("1_qsska")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cto6v"]
+atlas = ExtResource("1_qsska")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syf1q"]
+atlas = ExtResource("1_qsska")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xt03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubw0w")
+}],
+"loop": true,
+"name": &"bow and arows_ weapons hes carved ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w0ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tagnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js85u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw44f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk338")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs8oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px176")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cto6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syf1q")
+}],
+"loop": true,
+"name": &"talking sales ",
+"speed": 5.0
+}]
+
+[node name="grint the salesperson" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5xt03")
+animation = &"talking sales "
+frame = 1
+frame_progress = 0.12535195
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
