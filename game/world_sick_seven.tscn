@@ -1,18 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0wdqeb328ggl"]
+[gd_scene load_steps=6 format=3 uid="uid://c0wdqeb328ggl"]
 
 [ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="1_efa7n"]
+[ext_resource type="PackedScene" uid="uid://d1j7hrkcrgrn2" path="res://frizzy work.tscn" id="2_0l8rl"]
 [ext_resource type="PackedScene" uid="uid://cl84uc5c6vytl" path="res://nothing ig.tscn" id="2_5efv3"]
 [ext_resource type="PackedScene" uid="uid://cvwrfokt5v8ue" path="res://scawce.tscn" id="3_cnu02"]
+[ext_resource type="Texture2D" uid="uid://cqmoaw6lpxl66" path="res://videogames/placeholder setting.png" id="5_r0ytf"]
 
 [node name="world sick seven" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_efa7n")]
-y_sort_enabled = true
-position = Vector2(168, 87)
+z_index = 1
 
 [node name="Node2D" parent="." instance=ExtResource("2_5efv3")]
-position = Vector2(327, 205)
+z_index = 1
+position = Vector2(181, 141.00003)
 scale = Vector2(5, 5)
 
+[node name="Node2D2" parent="." instance=ExtResource("2_0l8rl")]
+position = Vector2(878, 136)
+
 [node name="scawce" parent="." instance=ExtResource("3_cnu02")]
-position = Vector2(406, 46)
+position = Vector2(587, 237)
+
+[node name="Player" parent="." instance=ExtResource("1_efa7n")]
+position = Vector2(211, 246)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(557.00006, 333)
+scale = Vector2(0.5107571, 0.42280307)
+texture = ExtResource("5_r0ytf")

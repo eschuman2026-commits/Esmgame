@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://dt0hdm7txouw7"]
+
+[ext_resource type="Script" uid="uid://d30kfbh7qsmnk" path="res://main_menu.gd" id="1_bajiw"]
+[ext_resource type="PackedScene" uid="uid://c0wdqeb328ggl" path="res://world_sick_seven.tscn" id="2_f0j1r"]
+[ext_resource type="Texture2D" uid="uid://g345a5ds0yr0" path="res://startpic.png" id="3_f0j1r"]
+[ext_resource type="Texture2D" uid="uid://djs5kjlp5v0s0" path="res://videogames/menubackround.png" id="4_iv0vr"]
+[ext_resource type="Texture2D" uid="uid://dpvg7txivhai8" path="res://videogames/he dies.png" id="4_qqwyt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iv0vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1emc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iv0vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw7qi"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bajiw")
+levelscene = ExtResource("2_f0j1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(550, 297.00003)
+scale = Vector2(0.35243386, 0.3546605)
+texture = ExtResource("4_iv0vr")
+
+[node name="HeDies" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(550.00006, 296.00003)
+scale = Vector2(0.3524339, 0.35466054)
+texture = ExtResource("4_qqwyt")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 398.0
+offset_top = 402.0
+offset_right = 2566.0
+offset_bottom = 2030.0
+scale = Vector2(0.1464499, 0.13579682)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iv0vr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n1emc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_iv0vr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mw7qi")
+icon = ExtResource("3_f0j1r")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

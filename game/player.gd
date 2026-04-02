@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var target_position=self.position
 
-@export var speed=100
+@export var speed=(200)
 
 func _ready() -> void:
 	AllwaysActive.player = self

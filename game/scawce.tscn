@@ -191,11 +191,11 @@ y_sort_enabled = true
 script = ExtResource("1_q13xd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-y_sort_enabled = true
-scale = Vector2(4, 4)
+position = Vector2(-3, -86)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 animation = &"walk to me"
-frame_progress = 0.7169119
+frame_progress = 0.83089507
 offset = Vector2(0, 3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
