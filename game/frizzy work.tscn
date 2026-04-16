@@ -56,9 +56,10 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(6, 6)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_gjhj5")
-animation = &"still"
-frame_progress = 0.79381645
+animation = &"dance"
+frame = 1
+frame_progress = 0.031086834
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]

@@ -21,13 +21,14 @@ func _physics_process(Delta:float)->void:
 	if Input.is_action_just_pressed("lmb"):
 		target_position=mouse_pos
 
-	velocity=(target_position-self.position).normalized()*speed
-	
+	var error = target_position-self.position
+	if error.length()>10:
+		velocity=(error).normalized()*speed
+		$AnimatedSprite2D.play("walk to me")
+	else:
+		velocity=Vector2.ZERO
+		$AnimatedSprite2D.play("stand front")
 	move_and_slide()
-	
-	
-	
-	
 
 func _process(delta: float) -> void:
 	$AnimatedSprite2D.play()

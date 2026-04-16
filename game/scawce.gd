@@ -9,9 +9,19 @@ func _physics_process(_delta: float) -> void:
 		$AnimatedSprite2D.play("walk to me")
 		
 		var direction = (player_pos-position).normalized()
-		target_position=player_pos-direction*following_dist
+		target_position = player_pos-direction*following_dist
 		
-		direction=(target_position-self.position).normalized()
-		velocity=direction*speed 
+		var error = (target_position-self.position)
+		if error.length()>10:
+			velocity=(error).normalized()*speed
+			$AnimatedSprite2D.play("walk to me")
+		else:
+			velocity=Vector2.ZERO
+			$AnimatedSprite2D.play("stand front")
+		
+		move_and_slide()
+		
+		#if error.length()>10:
+			#pass
 		move_and_slide()
 	
