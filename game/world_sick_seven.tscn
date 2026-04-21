@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0wdqeb328ggl"]
+[gd_scene load_steps=8 format=3 uid="uid://c0wdqeb328ggl"]
 
 [ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="1_efa7n"]
+[ext_resource type="PackedScene" uid="uid://ba54633gu6w12" path="res://sitting.tscn" id="1_yffj0"]
 [ext_resource type="PackedScene" uid="uid://d1j7hrkcrgrn2" path="res://frizzy work.tscn" id="2_0l8rl"]
 [ext_resource type="PackedScene" uid="uid://cl84uc5c6vytl" path="res://nothing ig.tscn" id="2_5efv3"]
 [ext_resource type="PackedScene" uid="uid://cvwrfokt5v8ue" path="res://scawce.tscn" id="3_cnu02"]
@@ -9,6 +10,12 @@
 
 [node name="world sick seven" type="Node2D"]
 z_index = 1
+position = Vector2(-30, -7)
+scale = Vector2(1.086882, 0.98156655)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_yffj0")]
+position = Vector2(564.00006, 100.000015)
+scale = Vector2(-5.5982537, 5.2355466)
 
 [node name="Node2D" parent="." instance=ExtResource("2_5efv3")]
 z_index = 1

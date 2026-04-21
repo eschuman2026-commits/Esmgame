@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://x53sgpfo4etp"]
+
+[ext_resource type="Script" uid="uid://cw43qxjni4oua" path="res://next_levle.gd" id="1_b82ao"]
+
+[node name="next levle" type="Area2D"]
+script = ExtResource("1_b82ao")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://oc0tgdx7y1aj"]
+
+[ext_resource type="Texture2D" uid="uid://cqmoaw6lpxl66" path="res://videogames/placeholder setting.png" id="1_ye7fo"]
+
+[sub_resource type="Animation" id="Animation_ix241"]
+resource_name = "try cutscene"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8vcau"]
+_data = {
+&"try cutscene": SubResource("Animation_ix241")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_8vcau")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(569.375, 325.5)
+scale = Vector2(0.5484954, 0.41666666)
+texture = ExtResource("1_ye7fo")

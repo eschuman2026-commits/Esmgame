@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 @export var speed=(200)
 
+var walking = false
+
 func _ready() -> void:
 	AllwaysActive.player = self
 
@@ -21,13 +23,15 @@ func _physics_process(Delta:float)->void:
 	if Input.is_action_just_pressed("lmb"):
 		target_position=mouse_pos
 
-	var error = target_position-self.position
+	var error = target_position-self.global_position
 	if error.length()>10:
-		velocity=(error).normalized()*speed
+		velocity=error.normalized()*speed
 		$AnimatedSprite2D.play("walk to me")
+		walking = true
 	else:
 		velocity=Vector2.ZERO
 		$AnimatedSprite2D.play("stand front")
+		walking = false
 	move_and_slide()
 
 func _process(delta: float) -> void:

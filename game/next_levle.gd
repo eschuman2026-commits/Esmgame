@@ -1,11 +1,5 @@
-extends Node
+extends Area2D
 
-var player : CharacterBody2D
-
-var current_level : Node
-
-@export var start_level : PackedScene
-@export var the_crossroads : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

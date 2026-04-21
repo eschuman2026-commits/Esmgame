@@ -12,16 +12,21 @@ func _physics_process(_delta: float) -> void:
 		target_position = player_pos-direction*following_dist
 		
 		var error = (target_position-self.position)
-		if error.length()>10:
-			velocity=(error).normalized()*speed
+		
+		if AllwaysActive.player.walking:
 			$AnimatedSprite2D.play("walk to me")
 		else:
-			velocity=Vector2.ZERO
 			$AnimatedSprite2D.play("stand front")
+		
+		if error.length()>10:
+			velocity=error.normalized()*speed
+		else:
+			velocity=Vector2.ZERO
+			
 		
 		move_and_slide()
 		
 		#if error.length()>10:
 			#pass
-		move_and_slide()
+		
 	

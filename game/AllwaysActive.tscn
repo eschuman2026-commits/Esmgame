@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://brhsjlww315ub"]
+
+[ext_resource type="Script" uid="uid://dfy07b1vhm2h2" path="res://allways_active.gd" id="1_1e7lp"]
+[ext_resource type="PackedScene" uid="uid://c0wdqeb328ggl" path="res://world_sick_seven.tscn" id="2_gc654"]
+[ext_resource type="PackedScene" uid="uid://dm36hpab2sbpt" path="res://the crossroads.tscn" id="3_f4bcn"]
+
+[node name="AllwaysActive" type="Node"]
+script = ExtResource("1_1e7lp")
+start_level = ExtResource("2_gc654")
+the_crossroads = ExtResource("3_f4bcn")

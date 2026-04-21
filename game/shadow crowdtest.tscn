@@ -6,9 +6,9 @@
 [sub_resource type="Curve2D" id="Curve2D_7svyi"]
 bake_interval = 32.34
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 56.708534, 375.2369, 0, 0, 0, 0, 1142.3624, 372.72418, 0, 0, 0, 0, 1146.3147, 304.04242, 0, 0, 0, 0, 51.284092, 304.04242, 0, 0, 0, 0, 47.14047, 241.22372, 0, 0, 0, 0, 92.6978, 244.57407, 0, 0, 0, 0, 1138.8533, 242.06131, -3.8702145, -18.829842, 3.8702145, 18.829842, 1143.6934, 158.30307, 0, 0, 0, 0, 951.8163, 169.19165, 0, 0, 0, 0, 466.02576, 168.35406, 0, 0, 0, 0, -3.0009155, 166.6789)
+"points": PackedVector2Array(0, 0, 0, 0, 56.708534, 375.2369, 0, 0, 0, 0, 1142.3624, 372.72418)
 }
-point_count = 11
+point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwa5q"]
 atlas = ExtResource("1_h45yt")
@@ -43,14 +43,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"testboy",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
 z_index = -1
-position = Vector2(-108, 42)
+position = Vector2(-73, -30.63269)
 scale = Vector2(1.1899213, 1.1955509)
 skew = 0.05235988
 curve = SubResource("Curve2D_7svyi")
@@ -66,9 +66,9 @@ cubic_interp = false
 script = ExtResource("1_7svyi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
-position = Vector2(-9.855874, 2.2592947)
-rotation = -3.1384695
-scale = Vector2(-3.4690354, 0.33301598)
+position = Vector2(11.277271, 2.7201643)
+rotation = -3.1413052
+scale = Vector2(-3.2011542, 0.32658347)
 skew = 1.1897649
 sprite_frames = SubResource("SpriteFrames_mhrdq")
 animation = &"testboy"
@@ -76,4 +76,64 @@ frame = 1
 frame_progress = 0.09292945
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+root_node = NodePath("../AnimatedSprite2D")
+
+[node name="Path2D" type="Path2D" parent="Path2D"]
+z_index = -1
+position = Vector2(43.093323, -251.27472)
+scale = Vector2(1.1899213, 1.1955509)
+skew = 0.05235988
+curve = SubResource("Curve2D_7svyi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D/Path2D"]
+position = Vector2(64.334, 375.21927)
+rotation = -0.023174375
+scale = Vector2(1.1515989, -29.991617)
+skew = -0.1134464
+progress = 7.6254883
+rotates = false
+cubic_interp = false
+script = ExtResource("1_7svyi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/Path2D/PathFollow2D"]
+position = Vector2(-3.0129318, 1.628291)
+rotation = -3.1384695
+scale = Vector2(-2.7691839, 0.27587572)
+skew = 1.1897649
+sprite_frames = SubResource("SpriteFrames_mhrdq")
+animation = &"testboy"
+frame = 1
+frame_progress = 0.09292945
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Path2D/Path2D/PathFollow2D"]
+root_node = NodePath("../AnimatedSprite2D")
+
+[node name="Path2D2" type="Path2D" parent="."]
+z_index = -1
+position = Vector2(1280, -149.63269)
+scale = Vector2(-1.082117, 1.1596378)
+skew = 0.05235988
+curve = SubResource("Curve2D_7svyi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(64.334, 375.21927)
+rotation = -0.023174375
+scale = Vector2(1.1515989, -29.991617)
+skew = -0.1134464
+progress = 7.6254883
+rotates = false
+cubic_interp = false
+script = ExtResource("1_7svyi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D2/PathFollow2D"]
+position = Vector2(-9.858387, 2.260292)
+rotation = -3.1384695
+scale = Vector2(-3.4690354, 0.3331286)
+skew = 1.1897649
+sprite_frames = SubResource("SpriteFrames_mhrdq")
+animation = &"testboy"
+frame = 1
+frame_progress = 0.09292945
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Path2D2/PathFollow2D"]
 root_node = NodePath("../AnimatedSprite2D")

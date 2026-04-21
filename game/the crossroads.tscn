@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://dm36hpab2sbpt"]
+[gd_scene load_steps=3 format=3 uid="uid://dm36hpab2sbpt"]
+
+[ext_resource type="Texture2D" uid="uid://hdlerwvgs1b3" path="res://crossroadsbackgoundmage.png" id="1_r5eam"]
+[ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="3_8laoj"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568.00006, 333)
+scale = Vector2(0.5186344, 0.3989198)
+texture = ExtResource("1_r5eam")
+
+[node name="Player" parent="." instance=ExtResource("3_8laoj")]
+position = Vector2(568.00006, 333)
+scale = Vector2(0.5186344, 0.3989198)
