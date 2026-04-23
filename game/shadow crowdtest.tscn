@@ -66,7 +66,7 @@ cubic_interp = false
 script = ExtResource("1_7svyi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
-position = Vector2(11.277271, 2.7201643)
+position = Vector2(11.032196, 2.734273)
 rotation = -3.1413052
 scale = Vector2(-3.2011542, 0.32658347)
 skew = 1.1897649
