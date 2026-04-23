@@ -4,10 +4,10 @@ extends PathFollow2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	progress+=1
 	$AnimatedSprite2D.play("testboy")

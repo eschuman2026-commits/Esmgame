@@ -9,7 +9,7 @@ var walking = false
 func _ready() -> void:
 	AllwaysActive.player = self
 
-func _physics_process(Delta:float)->void:
+func _physics_process(_Delta:float)->void:
 	
 	# old manual code
 	
@@ -40,7 +40,7 @@ func hide_interaction_label():
 func show_interaction_label():
 	$Label.show()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$AnimatedSprite2D.play()
 	
 

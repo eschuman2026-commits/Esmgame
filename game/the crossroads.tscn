@@ -20,9 +20,18 @@ position = Vector2(568.00006, 333)
 scale = Vector2(0.5186344, 0.3989198)
 
 [node name="next levle" parent="." instance=ExtResource("3_omoqd")]
-position = Vector2(69, 320)
+position = Vector2(68, 321)
 levelpath = "res://Market.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next levle"]
-position = Vector2(-52, -14)
+position = Vector2(-53, -13)
+shape = SubResource("CapsuleShape2D_s2b2b")
+
+[node name="next levle2" parent="." instance=ExtResource("3_omoqd")]
+position = Vector2(583, 693.00006)
+rotation = 1.5617871
+levelpath = "res://Market.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next levle2"]
+position = Vector2(-53, -13)
 shape = SubResource("CapsuleShape2D_s2b2b")

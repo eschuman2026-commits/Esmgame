@@ -4,17 +4,17 @@ extends Area2D
 
 #The three functions bellow are for genderal interactions.
 #Replace "new_level" with whatever you want to happen.
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	for body in get_overlapping_bodies():
 		if Input.is_action_just_pressed("ui_accept"):
 			#unique code
 			new_level()
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	AllwaysActive.player.show_interaction_label()
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	AllwaysActive.player.hide_interaction_label()
 
 
