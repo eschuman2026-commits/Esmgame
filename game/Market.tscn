@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0wdqeb328ggl"]
+
+[ext_resource type="PackedScene" uid="uid://ba54633gu6w12" path="res://sitting.tscn" id="1_pe72r"]
+[ext_resource type="PackedScene" uid="uid://cl84uc5c6vytl" path="res://nothing ig.tscn" id="2_c0j08"]
+[ext_resource type="PackedScene" uid="uid://d1j7hrkcrgrn2" path="res://frizzy work.tscn" id="3_kg5di"]
+[ext_resource type="PackedScene" uid="uid://cvwrfokt5v8ue" path="res://scawce.tscn" id="4_6wxv2"]
+[ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="5_v1x6k"]
+[ext_resource type="Texture2D" uid="uid://cqmoaw6lpxl66" path="res://videogames/placeholder setting.png" id="6_blkam"]
+[ext_resource type="PackedScene" uid="uid://ded1ghawk7qva" path="res://shadow crowdtest.tscn" id="7_1xuck"]
+[ext_resource type="PackedScene" uid="uid://x53sgpfo4etp" path="res://next_levle.tscn" id="8_hhnq7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxyph"]
+radius = 63.48436
+height = 334.15967
+
+[node name="world sick seven" type="Node2D"]
+z_index = 1
+position = Vector2(-30, -7)
+scale = Vector2(1.086882, 0.98156655)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_pe72r")]
+position = Vector2(564.00006, 100.000015)
+scale = Vector2(-5.5982537, 5.2355466)
+
+[node name="Node2D" parent="." instance=ExtResource("2_c0j08")]
+z_index = 1
+position = Vector2(163, 73.00002)
+scale = Vector2(5, 5)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_kg5di")]
+position = Vector2(871, 77)
+
+[node name="scawce" parent="." instance=ExtResource("4_6wxv2")]
+position = Vector2(587, 237)
+
+[node name="Player" parent="." instance=ExtResource("5_v1x6k")]
+position = Vector2(211, 246)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(557.00006, 333)
+scale = Vector2(0.5107571, 0.42280307)
+texture = ExtResource("6_blkam")
+
+[node name="Node2D3" parent="." instance=ExtResource("7_1xuck")]
+position = Vector2(-10, 111)
+
+[node name="next levle" parent="." instance=ExtResource("8_hhnq7")]
+position = Vector2(-256.6976, 394.2677)
+levelpath = "res://the crossroads.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next levle"]
+position = Vector2(1348.8125, -71.314606)
+shape = SubResource("CapsuleShape2D_xxyph")

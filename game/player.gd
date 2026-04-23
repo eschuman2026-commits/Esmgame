@@ -34,6 +34,12 @@ func _physics_process(Delta:float)->void:
 		walking = false
 	move_and_slide()
 
+func hide_interaction_label():
+	$Label.hide()
+
+func show_interaction_label():
+	$Label.show()
+
 func _process(delta: float) -> void:
 	$AnimatedSprite2D.play()
 	
