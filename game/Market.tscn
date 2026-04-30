@@ -50,5 +50,5 @@ position = Vector2(-256.6976, 394.2677)
 levelpath = "res://the crossroads.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next levle"]
-position = Vector2(1348.8125, -71.314606)
+position = Vector2(1348.8125, -71.314575)
 shape = SubResource("CapsuleShape2D_xxyph")

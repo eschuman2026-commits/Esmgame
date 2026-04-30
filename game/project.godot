@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AllwaysActive="*res://AllwaysActive.tscn"
+AllwaysActive="*res://allways_active.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/main_scene="uid://c0wdqeb328ggl"
 
 [input]
 

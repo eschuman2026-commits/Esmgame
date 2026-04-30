@@ -19,6 +19,6 @@ func _on_body_exited(_body: Node2D) -> void:
 
 
 func new_level():
-	AllwaysActive.current_level.queue_free()
 	AllwaysActive.current_level = load(levelpath).instantiate()
+	AllwaysActive.current_level.queue_free()
 	get_tree().get_root().add_child(AllwaysActive.current_level)
